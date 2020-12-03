@@ -38,3 +38,36 @@ STEPS
 
 
 XROOTD viewed as a tool for data access ---> user needs data access at anytime and anywhere (since the AAA paradigm)   ---> the stored data must have a protection mode ---> erasure coding is the perfect tool for having a consistent data access across the storage facilities. (EC comes into play as a useful tool for developing on XROOTD service) ---> erasure coding requires a lot of file operations ---> an optimal way of developing EC is to have an async behavior and a parallel workflow ---> standard async C++ api proves to give quite the headache when working with chained/parallel operations ---> that's why we need another method for development of the EC plug-in mechanism ----> DECLARATIVE API comes into play: smart way to control a pipeline for parallel processes.
+
+
+____
+extracted from michal's presentation
+
+motivation: we need a tool that writes/executes multiple operations (on remote files) IN PARALLEL
+
+!---> problem with the async operation composability and code readability 
+
+e.g., the simple workflow of opening and writing some data to a file requires the functional approach: Open() -> Write() -> Close() in async. (however, due to the Handler paradigm, this chain of operations in code is only visible as an Open()...rest of the workflow is in the callbacks..
+
+diagram with the standard async behavior.
+
+
+----> requirements of the EC plugin mechanism
+
+work with stripes of data (user would like to write one block of data striped to N data chunks and K parity chunks).
+
+the workflow: 
+
+OPEN all stripes
+
+WRITE all stripes
+
+SET XATTRs to all stripes
+
+CLOSE all stripes
+
+we require performance, so using the async api is needed.
+
+the writing and setxattrs operations should be done in parallel.
+
+show the listings for the standard API -> drawbacks in terms of code complexity and code readability 
