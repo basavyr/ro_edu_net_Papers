@@ -1,0 +1,20 @@
+______
+The original introduction
+_____
+
+
+
+
+Started as a protocol which granted remote access to root format specific files, with a primary use case focused on data analysis (rather than data transfer), XRootD became widely used within the scientific community at CERN (European Organization for Nuclear Research) and other large-scale facilities (e.g., SLAC-Stanford Linear Accelerator Center). Over the last years, the framework evolved a lot, and it now supports data analysis, data transfers, data management, and also features like staging data from tape. 
+
+In terms of storage capacity, only the ATLAS and CMS collaborations alone produce a total of around 150 Petabytes of data which needs to be accessed by thousands of physicists within the Worldwide Large Hadron Collider Compute Grid - WLCG community [7]. As a result, a key objective of the WLCG is to assure both the process of moving the data between sites and deliver the data to any end-user application
+
+The addition of XRootD on top of the Anydata, Anytime, Anywhere project (or AAA for short) [2] allowed the high Energy Physics community to achieve global data storage federations that have a single data-access entry point and also a common data-access protocol, which changed the old paradigm of distributed multi-tiered storage. This is possible through the hierarchical deployment of redirectors that allow real-time discovery of sites that are hosting the data. The XRootD ability to federate different sides through meta managers together with additional functionalities provided by the AAA (like logical file name translation to physical file name) allowed to achieve a global, multi-site environment for data storage and analysis.
+
+To emphasize the importance of XRootD, it is worth mentioning that currently at CERN, the main storage solution is EOS – a technology developed in-house and built on top of the XRootD framework. The LHC experiments (e.g. ATLAS, CMS, LHCb, ALICE) and also other smaller experiments hosted at CERN (e.g. AMS), including their user communities, use EOS for data storage and access. In the following section, we provide a clearer picture of the XRootD framework, both in terms of its server-side as well as its client-side, since both implementations are crucial in understanding the overall workflow of data access and data manipulation within the WLCG community.
+
+____
+Revised introduction
+____
+
+

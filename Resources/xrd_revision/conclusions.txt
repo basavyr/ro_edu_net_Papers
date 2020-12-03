@@ -1,0 +1,12 @@
+____ 
+The original conclusions
+____
+
+In the present work, a detailed overview of the XRootD framework was given, together with its major importance within the WLCG group and the High Energy Physics community. A short description of the architecture for both the server-side as well as the client-side was discussed. The asynchronous behavior of the XrdCl API which is written in C++ has been reviewed, with the latest features and release. Furthermore, a special focus was given on the File and FileSystem objects within the XRootD client. The asynchronous API’s importance in terms of usage has been mentioned and also the drawbacks in terms of code complexity. Subsequently, a discussion was made on the Declarative API, which is built on top of the existing XrdCl asynchronous API, with its main feature being the ease of use from a code-logistic standpoint. The Declarative API was adopted in the implementation of an Erasure Coding plug-in inside the XRootD client. It is showed that Declarative API is an efficient tool in providing an asynchronous C++ interface for the user while keeping a clear and concise workflow.
+
+
+___ 
+revised conclusions
+____
+
+

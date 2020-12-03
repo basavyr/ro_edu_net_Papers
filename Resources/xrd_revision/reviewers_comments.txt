@@ -1,0 +1,10 @@
+The first reviewer:
+
+The paper is a technology presentation regarding the architecture of a federated data storage framework (XRootD) used by large-scale computing grids (such as WLHC) and the asynchronous API for accessing files by the clients.
+A declarative API is then presented as a modern, easier to use alternative, which is employed by the authors to re-implement a redundant storage plugin based on Erasure Codes.
+Unfortunately, the contribution is not clearly presented, there is no related work mentioned (no motivation as to why the chosen subject is a valid research issue) and no results are evaluated (e.g., the given solution could have been compared with the existing one using a code-based metric).
+
+
+The second reviewer:
+
+Despite the detailed description, the paper does not highlight the work purposes and the achievements clearly. I suggest to the authors to revise the introduction and the conclusions in this light.
