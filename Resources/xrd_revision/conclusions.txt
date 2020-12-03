@@ -33,3 +33,8 @@ ACHIEVEMENTS
 we developed the EC plugin using the declarative api, which proves to be a much more concise tool in terms of coding process that the standard async api in c++
 
 
+
+STEPS 
+
+
+XROOTD viewed as a tool for data access ---> user needs data access at anytime and anywhere (since the AAA paradigm)   ---> the stored data must have a protection mode ---> erasure coding is the perfect tool for having a consistent data access across the storage facilities. (EC comes into play as a useful tool for developing on XROOTD service) ---> erasure coding requires a lot of file operations ---> an optimal way of developing EC is to have an async behavior and a parallel workflow ---> standard async C++ api proves to give quite the headache when working with chained/parallel operations ---> that's why we need another method for development of the EC plug-in mechanism ----> DECLARATIVE API comes into play: smart way to control a pipeline for parallel processes.
